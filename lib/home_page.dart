@@ -18,12 +18,12 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Byenvini $email 🎉",
+              "Byenvini $email se imel ou ",
               style: const TextStyle(fontSize: 22),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             const Text(
-              "Sa se paj prensipal aplikasyon an.",
+              "Nan paj prensipal la .",
               style: TextStyle(fontSize: 18),
             ),
           ],
