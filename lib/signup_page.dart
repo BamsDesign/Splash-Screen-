@@ -51,7 +51,7 @@ class _SignupPageState extends State<SignupPage> {
                     return "Antre email";
                   }
                   if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value)) {
-                    return "Email pa valid";
+                    return "Email ou a pa valid";
                   }
                   return null;
                 },
@@ -65,7 +65,7 @@ class _SignupPageState extends State<SignupPage> {
                 decoration: const InputDecoration(labelText: "Password"),
                 validator: (value) {
                   if (value == null || value.length < 8) {
-                    return "Modpas dwe gen omwen 8 karaktè";
+                    return "Modpas la dwe gen omwen 8 karaktè";
                   }
                   return null;
                 },
@@ -98,4 +98,3 @@ class _SignupPageState extends State<SignupPage> {
     );
   }
 }
-
