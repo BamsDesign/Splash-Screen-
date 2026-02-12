@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
-  bool _obscurePassword = true; // 🔥 pou toggle la
+  bool _obscurePassword = true; 
 
   void login() {
     if (_formKey.currentState!.validate()) {
@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
 
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Email ou modpas pa kòrèk")),
+          const SnackBar(content: Text("Email ou modpas ou a pa kòrèk")),
         );
       }
     }
@@ -56,13 +56,13 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             children: [
 
-              /// EMAIL FIELD
+              
               TextFormField(
                 controller: emailController,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: "Email",
-                  hintText: "bamsdesign08@gmail.com", // 🔥 example gri
+                  hintText: "bamsdesign08@gmail.com", 
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -72,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                     return "Antre email";
                   }
                   if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value)) {
-                    return "Email pa valid";
+                    return "Email ou a pa valid";
                   }
                   return null;
                 },
@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
 
               const SizedBox(height: 20),
 
-              /// PASSWORD FIELD
+              
               TextFormField(
                 controller: passwordController,
                 obscureText: _obscurePassword,
@@ -104,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return "Antre modpas";
+                    return "Antre modpas ou";
                   }
                   return null;
                 },
